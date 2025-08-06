@@ -2,7 +2,7 @@ import React from 'react'
 
 const DashFooter = () => {
     return (
-        <footer className="border-t border-violet-200 bg-white">
+        <footer className="border-t border-violet-200">
             <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-600">
                 <p>
                     &copy; {new Date().getFullYear()} The Dashboard. 

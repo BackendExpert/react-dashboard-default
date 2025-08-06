@@ -4,21 +4,25 @@ import { MdMessage, MdSearch } from 'react-icons/md'
 
 const DashNav = () => {
     return (
-        <div className="w-full border-b border-violet-200 bg-white px-6 py-3">
+        <div className="w-full border-b border-violet-200 bg-white px-6 md:py-3">
             <div className="flex justify-between items-center">
-                
-                {/* Search */}
-                <form action="" method="post" className="w-1/3">
-                    <div className="flex items-center bg-gray-100 rounded-full px-3 py-2 focus-within:ring-2 focus-within:ring-violet-300 transition">
-                        <MdSearch className="h-5 w-5 text-violet-600" />
-                        <input
-                            type="text"
-                            placeholder="Search..."
-                            className="bg-transparent outline-none ml-2 w-full text-gray-700 placeholder-gray-400"
-                        />
-                    </div>
-                </form>
 
+                {/* Search */}
+                <div className="">
+                    <form action="" method="post" className=" xl:block hidden">
+                        <div className=" flex items-center bg-gray-100 rounded-full px-3 py-2 focus-within:ring-2 focus-within:ring-violet-300 transition">
+                            <MdSearch className="h-5 w-5 text-violet-600" />
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                className="bg-transparent outline-none ml-2 w-full text-gray-700 placeholder-gray-400"
+                            />
+                        </div>
+                    </form>
+
+                    <div className="xl:hidden block"></div>
+
+                </div>
                 {/* Right section */}
                 <div className="flex items-center space-x-6">
                     {/* Icons */}
@@ -39,7 +43,7 @@ const DashNav = () => {
                             alt="Profile"
                             className="w-10 h-10 rounded-full border border-violet-300"
                         />
-                        <div className="leading-tight">
+                        <div className="leading-tight md:block hidden">
                             <h2 className="text-sm font-semibold text-gray-800">
                                 David Gray, H
                             </h2>
