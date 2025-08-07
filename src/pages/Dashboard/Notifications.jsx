@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaBell } from 'react-icons/fa6'
 import {
     FaUsers, FaBell, FaCommentDots, FaCheckCircle, FaExclamationTriangle,
     FaUserPlus, FaTrash, FaCalendarAlt, FaInfoCircle, FaEnvelope,
@@ -233,17 +232,33 @@ const Notifications = () => {
                 </div>
             </div>
 
-            <div className="max-w-5xl">
+            <div className="space-y-4 mt-8">
                 {
-                    sampledata_notification.map((data, index) => {
-                        return (
-                            <div className="" key={index}>
-                                <div className=""></div>
+                    sampledata_notification.map((data, index) => (
+                        <div
+                            key={index}
+                            className="flex items-center justify-between bg-white shadow-md rounded-xl p-4 hover:shadow-lg transition-all duration-300"
+                        >
+                            {/* Icon and text */}
+                            <div className="flex items-start space-x-4">
+                                <div className={`p-3 rounded-lg ${data.color}`}>
+                                    <data.icon className="text-white w-6 h-6" />
+                                </div>
+                                <div className="text-gray-700">
+                                    <h2 className="font-semibold text-base">{data.name}</h2>
+                                    <p className="text-sm text-gray-500">{data.desc}</p>
+                                </div>
                             </div>
-                        )
-                    })
+
+                            {/* Time */}
+                            <div className="text-sm text-gray-400 whitespace-nowrap ml-4">
+                                {data.time}
+                            </div>
+                        </div>
+                    ))
                 }
             </div>
+
         </div>
     )
 }
