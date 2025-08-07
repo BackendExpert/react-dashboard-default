@@ -237,7 +237,7 @@ const Notifications = () => {
                     sampledata_notification.map((data, index) => (
                         <div
                             key={index}
-                            className="flex items-center justify-between bg-white shadow-md rounded-xl p-4 hover:shadow-lg transition-all duration-300"
+                            className="md:flex items-center justify-between bg-white shadow-md rounded-xl p-4 hover:shadow-lg transition-all duration-300"
                         >
                             {/* Icon and text */}
                             <div className="flex items-start space-x-4">
@@ -251,7 +251,7 @@ const Notifications = () => {
                             </div>
 
                             {/* Time */}
-                            <div className="text-sm text-gray-400 whitespace-nowrap ml-4">
+                            <div className="md:text-left text-right md:mt-0 mt-4 text-sm text-gray-400 whitespace-nowrap ml-4">
                                 {data.time}
                             </div>
                         </div>
